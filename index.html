@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temperature Calculator</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <main class="o-container">
+      <div class="o-grid">
+        <div class="c-box">
+          <h1>Temperature calculator</h1>
+          <form class="c-form js-calculator-form" name="Temperature calculator" action="#">
+            <div class="c-form__control">
+              <label class="c-form__label" for="degrees">Convert</label>
+              <input
+                class="c-form__input js-input-degrees"
+                type="number"
+                name="degrees"
+                id="degrees"
+                value="1"
+                step="any"
+                required
+              />
+
+              <div class="c-error is-hidden"></div>
+            </div>
+
+            <div class="c-form__row">
+              <div class="c-form__control">
+                <label class="c-form__label" for="from-type">From</label>
+                <select class="c-form__select js-select-from-type" name="from-type" id="from-degree" size="3">
+                  <option value="celsius" selected>Celsius</option>
+                  <option value="fahrenheit">Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                </select>
+              </div>
+
+              <div class="c-form__control">
+                <label class="c-form__label" for="to-type">To</label>
+                <select class="c-form__select js-select-to-type" name="to-type" id="to-degree" size="3">
+                  <option value="celsius">Celsius</option>
+                  <option value="fahrenheit" selected>Fahrenheit</option>
+                  <option value="kelvin">Kelvin</option>
+                </select>
+              </div>
+              <div class="c-error is-hidden js-degree-type-error">
+                <strong>From</strong> and <strong>to</strong> cannot be the same.
+              </div>
+            </div>
+
+            <button class="c-form__button" type="submit">Calculate</button>
+          </form>
+        </div>
+
+        <div class="c-result c-box">
+          <h2>Result</h2>
+          <p class="c-result__text js-result"></p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
